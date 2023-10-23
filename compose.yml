@@ -1,9 +1,9 @@
 version: '3'
 services:
-    provider:
-        image: provider:0.0.1
+    provider: # defines the name of the service in the network
+        image: provider:0.0.1 # must match the name and version we chose when building the image
         ports:
-            - 8081:8080
+            - 8081:8080 # 8081 on HOST will be mapped to 8080 on CONTAINER
     consumer:
         image: consumer:0.0.1
         ports:
